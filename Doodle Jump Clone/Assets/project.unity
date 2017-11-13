@@ -112,6 +112,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &162653683
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4237045705095476, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237045705095476, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.406
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237045705095476, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237045705095476, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237045705095476, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237045705095476, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237045705095476, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237045705095476, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 05897cb8cf9d0f240ac0a57a95f8998c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &902786880
 Prefab:
   m_ObjectHideFlags: 0
@@ -256,7 +298,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 1600710559753690, guid: 31f72e8916ca16c488cf1c850191242d,
     type: 2}
-  numberOfPlatforms: 100
+  superPlatformPrefab: {fileID: 1125303365901792, guid: 05897cb8cf9d0f240ac0a57a95f8998c,
+    type: 2}
+  numberOfPlatforms: 500
+  superPlatRarity: 0.1
   levelWidth: 3
   minY: 0.2
   maxY: 1.5

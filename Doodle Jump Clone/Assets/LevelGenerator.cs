@@ -5,8 +5,10 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour {
 
     public GameObject platformPrefab;
+	public GameObject superPlatformPrefab;
 
     public int numberOfPlatforms;
+	public float superPlatRarity;
     public float levelWidth = 3f;
     public float minY = .2f;
     public float maxY = 1.5f;
@@ -23,8 +25,15 @@ public class LevelGenerator : MonoBehaviour {
 			//spawnPosition.y += 0.2f;
 			//spawnPosition.x = levelWidth*Mathf.Sin(currentThing) + Mathf.Cos(2*currentThing);
 			spawnPosition.x = Random.Range(-levelWidth,levelWidth);
-			Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
-			currentThing += 0.2f;
+			if(Random.Range(0f, 1f) < superPlatRarity)
+			{
+				Instantiate(superPlatformPrefab, spawnPosition, Quaternion.identity);
+			}
+			else
+			{
+				Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+			}
+			//currentThing += 0.2f;
 		}
 	}
 	

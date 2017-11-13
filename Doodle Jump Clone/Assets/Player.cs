@@ -6,9 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour {
 
-    Rigidbody2D rb;
-    float movement = 0f;
+    private Rigidbody2D rb;
+    private float movement = 0f;
+
     public float movementSpeed = 10f;
+	
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -17,6 +19,16 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         movement = Input.GetAxis("Horizontal") * movementSpeed;
+		Vector2 position = rb.position;
+		if(rb.position.x < -4f)
+		{
+			position.x = 4f;
+		}
+		if(transform.position.x > 4f)
+		{
+			position.x = -4f;
+		}
+		rb.position = position;
 	}
 
     void FixedUpdate()
